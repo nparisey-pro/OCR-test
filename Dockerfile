@@ -10,6 +10,7 @@ COPY . ${HOME}
 USER root
 RUN chown -R ${NB_UID} ${HOME}
 USER ${NB_USER}
-# RUN pip install --upgrade pip
-RUN git clone https://github.com/siavashk/pycpd.git pycpd
-RUN cd pycpd; pip install . 
+RUN pip install --upgrade pip
+RUN pip install pycpd
+RUN pip install scikit-image
+RUN pip install matplotlib
